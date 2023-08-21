@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "openbb-example"
+version = "0.1.0"
+description = ""
+authors = ["Hju Kneyck Flores <hjucode@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "openbb_example" }]
+
+[tool.poetry.dependencies]
+python = ">=3.10.12,<3.11.0"
+streamlit = "^1.25.0"
+openbb = { git = "https://github.com/huenique/OpenBBTerminal.git" }
+sqlalchemy = "^2.0.20"
+python-dateutil = "^2.8.2"
+pypdf2 = "^3.0.1"
+pywry = "^0.5.13"
+st-pages = "^0.4.3"
+langchain-experimental = "^0.0.10"
+
+[tool.poetry.group.dev.dependencies]
+pyright = "^1.1.323"
+ruff = "^0.0.285"
+black = "^23.7.0"
+isort = "^5.12.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+exclude = ["typings"]
